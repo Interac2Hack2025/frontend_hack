@@ -9,7 +9,7 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   private apiUrl(path: string): string {
-    return `https://api.example.com/${path}`;
+    return `https://hackaton-backend.azurewebsites.net/${path}`;
   }
 
   post<T>(apiPath: string, data: unknown = {}): Observable<T> {

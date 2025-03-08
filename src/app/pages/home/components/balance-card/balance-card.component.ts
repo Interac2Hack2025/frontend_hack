@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-balance-card',
   standalone: true,
   imports: [CommonModule],
+<<<<<<< HEAD
   template: `
     <div class="balance-card">
       <h2>Saldo disponible</h2>
@@ -47,5 +48,9 @@ import { CommonModule } from '@angular/common';
       }
     `,
   ],
+=======
+  templateUrl: './balance-card.component.html',
+  styleUrl: './balance-card.component.scss',
+>>>>>>> 1e3d0bdf6bf43cf6615a73ba69f8bae1b06e984f
 })
 export class BalanceCardComponent {}
