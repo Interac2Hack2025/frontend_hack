@@ -1,0 +1,23 @@
+<div class="min-h-screen flex flex-col bg-gray-900 items-center justify-center h-full gap-6 text-center px-4 relative">
+  <button
+    class="absolute top-4 left-4 w-10 h-10 flex items-center justify-center bg-white text-black rounded-full shadow-lg">
+    <span class="material-icons">arrow_back</span>
+  </button>
+
+  <button
+    class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-white text-black rounded-full shadow-lg">
+    <span class="material-icons">flashlight_on</span>
+  </button>
+  <div class="flex flex-col space-x-2 items-center ">
+    <h1 class="text-lg font-semibold text-white px-2">
+      Escanea el código QR para obtener información de tu entrega
+    </h1>
+    <div class="relative w-52 h-52 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+
+      <img src="assets/qr.png" alt="Código QR" class="w-40 h-40">
+    </div>
+  </div>
+  <p *ngIf="scannedCode" class="text-lg font-medium text-gray-300 mt-2">
+    ✅ Código escaneado: <span class="text-green-400">{{ scannedCode }}</span>
+  </p>
+</div>
