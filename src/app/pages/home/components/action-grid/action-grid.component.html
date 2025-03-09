@@ -1,9 +1,12 @@
 <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-4 p-4 max-w-3/4 mx-auto">
-  <button *ngFor="let action of actions" 
+  <button *ngFor="let action of actions; let i = index" 
           class="flex flex-col items-center focus:outline-none"
+          [ngStyle]="{'color': action.color}"
           (click)="onActionClick(action)">
-    <div class="p-4 shadow-lg border rounded-xl flex items-center justify-center mb-2 transition-transform transform hover:scale-105 hover:shadow-xl hover:border-blue-500">
-      <span class="material-icons text-4xl text-blue-600">{{ action.icon }}</span>
+    <div class="p-4 shadow-lg border rounded-xl flex items-center justify-center mb-2 transition-transform transform hover:scale-105 hover:shadow-xl" 
+         [ngClass]="{'hover:border-blue-500': i % 2 === 0, 'hover:border-green-500': i % 2 !== 0}"
+         [ngStyle]="{'border-color': action.color}">
+      <span class="material-icons text-4xl" [ngStyle]="{'color': action.color}">{{ action.icon }}</span>
     </div>
     <span class="font-semibold text-gray-800 text-center">{{ action.name }}</span>
   </button>
