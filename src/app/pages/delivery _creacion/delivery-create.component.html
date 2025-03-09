@@ -1,0 +1,35 @@
+<div class="app-container">
+  <main class="min-h-screen flex flex-col items-center justify-center space-y-32 p-4">
+    <header>
+      <h1 class="text-3xl font-bold text-gray-800 mb-6">Crear Contra Pago</h1>
+    </header>
+
+    <div class="mb-6">
+      <img src="assets/icon-deuna.png" alt="Ícono de pago" class="w-24 h-24 mx-auto shadow-md">
+    </div>
+
+    <div class="w-full flex flex-col items-center">
+      <input
+        class="block w-2/3 p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+        placeholder="Cantidad">
+      <input
+        class="block w-2/3 p-3 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+        placeholder="Detalle">
+    </div>
+
+    <div class="flex gap-4">
+      <button
+        class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all flex-1 flex items-center justify-center">
+        <span class="material-icons">link</span>
+        <span class="ml-2">Generar Link</span>
+      </button>
+      <button
+        class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all flex-1 flex items-center justify-center"
+        (click)="abrirNuevaPagina()">
+        <span class="material-icons">search</span>
+        <span class="ml-2">Buscar Verificador</span>
+      </button>
+    </div>
+  </main>
+  <app-footer-nav></app-footer-nav>
+</div>
