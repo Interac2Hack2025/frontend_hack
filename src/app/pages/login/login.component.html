@@ -1,16 +1,28 @@
 <div class="h-screen flex items-center justify-center">
   <form [formGroup]="formLogin" class="w-full max-w-lg p-12">
     <label for="username" class="text-center block font-semibold text-4xl text-gray-900">¡Hola!</label>
-    <div class="mt-12">
-      <div class="flex rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+    <div class="mt-8 mb-4">
+      <img src="assets/icon-deuna.png" alt="Código QR" class="w-14 h-14 flex items-center justify-center mx-auto">
+    </div>
+    <div class="mt-8 space-y-6">
+      <div class="mt-8 flex rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
         <input 
           formControlName="username"
-          type="text" name="username" id="username" class="w-full marker:block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="Ingresa tu clave deUna">
+          type="email" name="email" id="email" 
+          class="w-full marker:block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" 
+          placeholder="Ingresa tu email deUna">
+      </div>
+      <div class="flex rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+        <input 
+        formControlName="password"
+        type="password" name="username" id="username" 
+        class="w-full marker:block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" 
+        placeholder="Ingresa tu contraseña deUna">
       </div>
     </div>
-    <div class="mt-14 gap-x-6 space-x-5 flex justify-end">
+    <div class="mt-6 gap-x-6 space-x-5 flex justify-end">
       <button type="button" class="text-sm/6 font-semibold text-gray-900">Cancelar</button>
-      <button (click)="getUserInfo($event)" type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
+      <button (click)="getAuth()" type="submit" class="rounded-md bg-purple-950 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
     </div>
   </form>
 </div>

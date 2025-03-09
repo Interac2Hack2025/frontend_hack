@@ -3,10 +3,7 @@
     <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-5 flex flex-col items-center text-center">
       <h2 class="text-xl font-semibold text-gray-800">Seguimiento de Entrega</h2>
   
-      <div class="relative w-48 h-48 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center mt-1">
-        <img src="assets/qr.png" alt="Código QR" class="w-40 h-40">
-      </div>
-  
+
       <div class="mt-6 w-full flex flex-col items-center">
         <div class="w-3/4 h-2 bg-gray-300 rounded-full">
           <div class="h-2 bg-green-500 rounded-full w-2/3"></div>
@@ -20,34 +17,5 @@
       </div>
     </div>
   
-    <!-- Sección del Chat -->
-    <div class="relative flex flex-col w-full max-w-md bg-white rounded-lg shadow-lg p-5 mt-1 flex-1">
-      <h2 class="text-xl font-semibold text-gray-800 mb-1 text-center">Pedido</h2>
-  
-      <div class="flex-1 overflow-y-auto space-y-2 p-2 w-full">
-        <div *ngFor="let message of chatMessages" class="flex" [ngClass]="{
-            'justify-start': message.sender === 'vendor',
-            'justify-end': message.sender === 'user'
-          }">
-          <div class="p-3 rounded-2xl max-w-[75%] shadow-sm"
-            [ngClass]="{
-              'bg-blue-500 text-white': message.sender === 'vendor',
-              'bg-gray-200 text-black': message.sender === 'user'
-            }">
-            <p class="text-xs">{{ message.text }}</p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="mt-4 flex items-center gap-3 w-full">
-        <input type="text" placeholder="¡Escribe aquí tu mensaje! 😄"
-          class="flex-1 p-3 border border-gray-300 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <span class="material-icons text-blue-600">send</span>
-      </div>
-  
-      <!-- Botón de Soporte -->
-      <button (click)="changeToSupport()" class="absolute top-2 right-2 text-blue-500 p-3">
-        <span class="material-icons">support_agent</span>
-      </button>
-    </div>
+
   </div>

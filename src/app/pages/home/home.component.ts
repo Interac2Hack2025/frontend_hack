@@ -6,7 +6,6 @@ import { ActionGridComponent } from './components/action-grid/action-grid.compon
 import { PagosComponent } from './components/action-pagos/action-pagos.component';
 import { BalanceCardComponent } from './components/balance-card/balance-card.component';
 
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,7 +15,7 @@ import { BalanceCardComponent } from './components/balance-card/balance-card.com
     ActionGridComponent,
     ActionButtonsComponent,
     FooterNavComponent,
-    PagosComponent
+    PagosComponent,
   ],
   templateUrl: './home.component.html',
 })
