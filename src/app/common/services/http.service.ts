@@ -31,6 +31,8 @@ export class HttpService {
       }),
     };
 
+    console.log('apiPath', this.apiUrl(apiPath));
+
     return this.http.get<T>(this.apiUrl(apiPath), options);
   }
 }
