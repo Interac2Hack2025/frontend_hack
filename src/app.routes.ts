@@ -13,8 +13,8 @@ export const routes: Routes = [
     children: [
       { path: '', component: DeliveryScanComponent },
       { path: 'details', component: DeliveryComponent },
+      { path: 'create', component: DeliveryCreateComponent }
     ],
   },
-  { path: 'create', component: DeliveryCreateComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
