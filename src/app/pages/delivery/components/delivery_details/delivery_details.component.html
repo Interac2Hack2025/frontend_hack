@@ -1,21 +1,59 @@
-<div class="min-h-[80vh] flex flex-col items-center bg-gray-100 px-4 py-2">
-    <!-- Seguimiento de Entrega -->
-    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-5 flex flex-col items-center text-center">
-      <h2 class="text-xl font-semibold text-gray-800">Seguimiento de Entrega</h2>
-  
+<div class="min-h-[80vh] flex flex-col items-center bg-gray-100 px-4 py-8">
+  <div class="w-full min-h-[70vh] max-w-md bg-white rounded-lg shadow-lg p-6 flex flex-col">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-left">Seguimiento de Entrega</h2>
 
-      <div class="mt-6 w-full flex flex-col items-center">
-        <div class="w-3/4 h-2 bg-gray-300 rounded-full">
-          <div class="h-2 bg-green-500 rounded-full w-2/3"></div>
+    <div class="w-full flex flex-col justify-around space-y-16">
+
+      <div class="flex items-center w-full">
+        <div class="flex-shrink-0 w-1 h-20 bg-gray-300 ml-2.5"></div>
+        <div class="flex items-center">
+          <div class="flex-shrink-0 w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center ml-2">
+            <span class="text-white text-lg">4</span>
+          </div>
+          <div class="ml-4 text-left">
+            <p class="text-lg font-semibold text-gray-400">Entregado</p>
+            <p class="text-base text-gray-400">Pedido entregado con éxito.</p>
+          </div>
         </div>
-        <div class="flex justify-between w-3/4 mt-2 text-xs text-gray-600">
-          <span class="text-green-600 font-semibold">Solicitado</span>
-          <span class="text-yellow-600 font-semibold">Enviado</span>
-          <span class="text-gray-500">Recibido</span>
-          <span class="text-gray-400">Entregado</span>
+      </div>
+      <div class="flex items-center w-full">
+        <div class="flex-shrink-0 w-1 h-20 bg-gray-300 ml-2.5"></div>
+        <div class="flex items-center">
+          <div class="flex-shrink-0 w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center ml-2">
+            <span class="text-white text-lg">3</span>
+          </div>
+          <div class="ml-4 text-left">
+            <p class="text-lg font-semibold text-gray-500">Recibido</p>
+            <p class="text-base text-gray-400">Esperando confirmación de entrega.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center w-full">
+        <div class="flex-shrink-0 w-1 h-20 bg-yellow-500 ml-2.5"></div>
+        <div class="flex items-center">
+          <div class="flex-shrink-0 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center ml-2">
+            <span class="text-white text-lg">2</span>
+          </div>
+          <div class="ml-4 text-left">
+            <p class="text-lg font-semibold text-yellow-600">Enviado</p>
+            <p class="text-base text-gray-500">Tu pedido está en camino.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center w-full">
+        <div class="flex-shrink-0 w-1 h-20 bg-green-500 ml-2.5"></div>
+        <div class="flex items-center">
+          <div class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center ml-2">
+            <span class="text-white text-lg">1</span>
+          </div>
+          <div class="ml-4 text-left">
+            <p class="text-lg font-semibold text-green-600">Solicitado</p>
+            <p class="text-base text-gray-500">Tu pedido ha sido recibido.</p>
+          </div>
         </div>
       </div>
     </div>
-  
-
   </div>
+</div>
