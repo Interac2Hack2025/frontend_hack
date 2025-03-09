@@ -1,8 +1,10 @@
-<div class="grid-container">
-    <div class="grid-item" *ngFor="let action of actions">
-      <div class="icon-container">
-        <img [src]="action.icon" [alt]="action.name" />
-      </div>
-      <span>{{ action.name }}</span>
+<div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-4 p-4 max-w-3/4 mx-auto">
+  <button *ngFor="let action of actions" 
+          class="flex flex-col items-center focus:outline-none"
+          (click)="onActionClick(action)">
+    <div class="p-4 shadow-lg border rounded-xl flex items-center justify-center mb-2 transition-transform transform hover:scale-105 hover:shadow-xl hover:border-blue-500">
+      <span class="material-icons text-4xl text-blue-600">{{ action.icon }}</span>
     </div>
-  </div>
+    <span class="font-semibold text-gray-800 text-center">{{ action.name }}</span>
+  </button>
+</div>

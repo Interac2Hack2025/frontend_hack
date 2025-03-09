@@ -1,10 +1,16 @@
-<div class="action-buttons">
-  <button class="transfer-btn">
-    <span class="icon">✉️</span>
-    Transferir
+<div class="bg-white mx-8 flex gap-2">
+  <button 
+    class="flex flex-col items-center justify-center w-full rounded-lg shadow-md border text-gray-600 text-xs focus:outline-none hover:text-purple-700 active:text-purple-800"
+    [ngClass]="{'text-purple-700': activeButton === 0}"
+    (click)="setActive(0)">
+    <span class="material-icons text-2xl">mail</span>
+    <span>Transferir</span>
   </button>
-  <button class="qr-btn">
-    <span class="icon">📱</span>
-    Pagar a QR
+  <button 
+    class="flex flex-col items-center justify-center py-2 w-full rounded-lg shadow-md border text-gray-600 text-xs focus:outline-none hover:text-purple-700 active:text-purple-800"
+    [ngClass]="{'text-purple-700': activeButton === 1}"
+    (click)="setActive(1)">
+    <span class="material-icons text-2xl">qr_code_scanner</span>
+    <span>Pagar a QR</span>
   </button>
 </div>

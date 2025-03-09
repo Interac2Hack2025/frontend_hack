@@ -4,6 +4,7 @@ import { ActionGridComponent } from './components/action-grid/action-grid.compon
 import { BalanceCardComponent } from './components/balance-card/balance-card.component';
 import { FooterNavComponent } from './components/footer-nav/footer-nav.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PagosComponent } from './components/action-pagos/action-pagos.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
     ActionGridComponent,
     ActionButtonsComponent,
     FooterNavComponent,
+    PagosComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

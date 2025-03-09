@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 @Component({
-  selector: 'app-balance-card',
+  selector: 'app-pagos',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './balance-card.component.html',
+  templateUrl: "action-pagos.component.html"
 })
-export class BalanceCardComponent {}
+export class PagosComponent {
+}

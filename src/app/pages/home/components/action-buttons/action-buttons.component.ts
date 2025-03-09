@@ -6,6 +6,11 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './action-buttons.component.html',
-  styleUrl: './action-buttons.component.scss',
 })
-export class ActionButtonsComponent {}
+export class ActionButtonsComponent {
+  activeButton: number = 0;
+
+  setActive(index: number) {
+    this.activeButton = index;
+  }
+}
