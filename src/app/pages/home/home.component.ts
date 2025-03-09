@@ -18,6 +18,5 @@ import { PagosComponent } from './components/action-pagos/action-pagos.component
     PagosComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
 })
 export class HomeComponent {}
