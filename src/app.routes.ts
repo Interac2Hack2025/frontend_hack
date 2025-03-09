@@ -1,14 +1,16 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './app/pages/login/login.component';
+import { DeliveryComponent } from './app/pages/delivery/delivery.component';
 import { HomeComponent } from './app/pages/home/home.component';
+import { DeliveryScanComponent } from './app/pages/delivery _scan/delivery-scan.component';
 
 export const routes: Routes = [
-  {
-    path: 'login',
-    component: LoginComponent,
+  { path: 'home', component: HomeComponent },
+  { 
+    path: 'delivery', 
+    children: [
+      { path: '', component: DeliveryScanComponent },
+      { path: 'details', component: DeliveryComponent }
+    ]
   },
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
