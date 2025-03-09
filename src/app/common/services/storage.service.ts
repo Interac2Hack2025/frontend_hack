@@ -17,6 +17,7 @@ export class StorageService {
 
   getItem<T>(key: string): T | null {
     const data = localStorage.getItem(key);
+    console.log('data', data);
     return data ? (JSON.parse(data) as T) : null;
   }
 

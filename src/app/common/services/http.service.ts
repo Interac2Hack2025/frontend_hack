@@ -24,12 +24,14 @@ export class HttpService {
   }
 
   get<T>(apiPath: string): Observable<T> {
-    console.log('ariii', localStorage.getItem('token'));
+    const rawToken = localStorage.getItem('token');
+    const token = rawToken ? rawToken.replace(/"/g, '') : null;
+
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         responseType: 'json',
-        Authorization: localStorage.getItem('token')?.toString() || '',
+        Authorization: `Bearer ${token}`,
       }),
     };
 

@@ -16,4 +16,8 @@ export class QrScannerComponent {
   goToDeliveryDetails() {
     this.router.navigate(['/delivery/details']);
   }
+
+  backHome() {
+    this.router.navigate(['/home']);
+  }
 }

@@ -11,11 +11,11 @@ import {
   FormsModule,
 } from '@angular/forms';
 import { map } from 'rxjs';
-import { MAT_SNACK_BAR_DATA, MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface IUserInfo {
-  id: string;
-  username: string;
+  name: string;
+  email: string;
   role: number;
 }
 
@@ -59,8 +59,19 @@ export class LoginComponent implements OnInit {
         if (access_token) {
           this.storageService.setItemToken('token', access_token);
           this.feedbackUserAuth();
-          this.getUserInfo();
           this.router.navigate(['/home']);
+        }
+      });
+  }
+
+  getUserInfo() {
+    this.httpService
+      .get('user/me')
+      .pipe(map((response: any) => response))
+      .subscribe((data) => {
+        if (data) {
+          console.log('User info header:', data);
+          this.storageService.setItemUserInfo('userinfo', data);
         }
       });
   }
@@ -79,17 +90,6 @@ export class LoginComponent implements OnInit {
       horizontalPosition: 'end',
       verticalPosition: 'top',
     });
-  }
-
-  getUserInfo() {
-    this.httpService
-      .get<{ data: IUserInfo }>('user/me')
-      .pipe(map((response) => response.data))
-      .subscribe((data: IUserInfo) => {
-        if (data) {
-          this.storageService.setItemUserInfo('userInfo', data);
-        }
-      });
   }
 
   ngOnInit(): void {
